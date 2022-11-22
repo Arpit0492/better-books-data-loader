@@ -1,15 +1,22 @@
+
+datadump.location:
+    author: /Users/kubrick/Developer/Spring/BetterBooksProject/ol_dump_authors_2022-10-31.txt
+    works: /Users/kubrick/Developer/Spring/BetterBooksProject/ol_dump_works_2022-10-31.txt
+
 spring:
     data:
         cassandra:
             keyspace-name: main
             username: PHuyfUvpgtGiRnsyIrwJhvEz
             password: 5PB6YngY5drabPo7O--65AK24.rvqFAHYSvLl.h2zEWlhku10PjuNdIlzxoR,Z0ZewngZvxRZW4+QEuDg+WPdauto-PS,dyGrqWXzOipnElBFpZhcnb7P2rZxfB6apZw
-            schema-action: create-if-not-exists
+            schema-action: recreate
             request:
                 timeout: 10s
             connection:
                 connect-timeout: 10s
                 init-query-timeout: 10s
+    main:
+        allow-circular-references: true
 
 
 
